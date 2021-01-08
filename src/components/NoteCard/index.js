@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 import DataComponent from '../DataComponent'
 import DataLoader from '../DataLoader'
+import DataLoadingComponent from '../DataLoadingComponent'
 
 const Wrapper = styled.div`
   height: 200px;
@@ -23,19 +24,14 @@ class NoteCard extends React.Component {
     const {url} = this.props
     return (
       <Wrapper>
-        <DataLoader {...{url}}> 
-          {(data, error) => (
+        <DataLoadingComponent {...{url}}>
+          {(data) => (
             <>
-              <DataComponent data={data?.name} error={error}>
-                {(data) => <Title>{data}</Title>}
-              </DataComponent>
-
-              <DataComponent data={data?.height} error={error}>
-                {(data) => <Text defaultValue={data}></Text>}
-              </DataComponent>
+              <Title>{data?.name}</Title>
+              <Text defaultValue={data?.height}></Text>
             </>
           )}
-        </DataLoader>
+        </DataLoadingComponent>
       </Wrapper>
     )
   }
