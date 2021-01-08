@@ -3,10 +3,15 @@ import React from 'react'
 import Spinner from "../Spinner"
 
 function DataComponent(props) {
+  if (!props.error) {
+    return (
+      props.data 
+          ? props.children(props.data)
+          : <Spinner/>
+    )
+  }
   return (
-    props.data 
-        ? props.children(props.data)
-        : <Spinner/>
+    <p>{props.error.message}</p>
   )
 }
 

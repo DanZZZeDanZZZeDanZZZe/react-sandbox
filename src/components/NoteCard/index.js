@@ -24,13 +24,13 @@ class NoteCard extends React.Component {
     return (
       <Wrapper>
         <DataLoader {...{url}}> 
-          {(data) => (
+          {(data, error) => (
             <>
-              <DataComponent data={data?.name}>
+              <DataComponent data={data?.name} error={error}>
                 {(data) => <Title>{data}</Title>}
               </DataComponent>
 
-              <DataComponent data={data?.height}>
+              <DataComponent data={data?.height} error={error}>
                 {(data) => <Text defaultValue={data}></Text>}
               </DataComponent>
             </>
