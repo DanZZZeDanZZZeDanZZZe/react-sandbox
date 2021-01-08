@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import DataLoader from './components/DataLoader';
+import NoteCard from './components/NoteCard';
 
 const  Wrapper = styled.div`
   height: 100%;
@@ -11,7 +13,7 @@ const  Wrapper = styled.div`
 function App() {
   return (
     <Wrapper>
-      'Hello world!'
+      <NoteCard {...{url: 'https://swapi.dev/api/people/1/'}}/>
     </Wrapper>
   )
 }
