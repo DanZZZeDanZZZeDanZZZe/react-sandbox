@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import SideMenu from './components/SideMenu';
 
 const  Wrapper = styled.div`
   height: 100%;
@@ -12,7 +11,6 @@ const  Wrapper = styled.div`
 function App() {
   return (
     <Wrapper>
-      <SideMenu/>
     </Wrapper>
   )
 }
