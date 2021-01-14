@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import GroupForm from './components/forms/GroupForm';
 
-const  Wrapper = styled.div`
+const Wrapper = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
@@ -11,6 +12,7 @@ const  Wrapper = styled.div`
 function App() {
   return (
     <Wrapper>
+      <GroupForm formColor="pink"/>
     </Wrapper>
   )
 }
