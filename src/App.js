@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import GroupForm from './components/forms/GroupForm';
+import ColorPicker from './components/ColorPicker';
 
 const Wrapper = styled.div`
   height: 100%;
@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 function App() {
   return (
     <Wrapper>
-      <GroupForm formColor="pink"/>
+      <ColorPicker setValue={(color) => console.log(color)}/>
     </Wrapper>
   )
 }
