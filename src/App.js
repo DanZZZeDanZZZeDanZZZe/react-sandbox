@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Calendar from './components/Calendar';
 import ColorPicker from './components/ColorPicker';
 
 const Wrapper = styled.div`
@@ -12,7 +13,7 @@ const Wrapper = styled.div`
 function App() {
   return (
     <Wrapper>
-      <ColorPicker setValue={(color) => console.log(color)}/>
+      <Calendar/>
     </Wrapper>
   )
 }
